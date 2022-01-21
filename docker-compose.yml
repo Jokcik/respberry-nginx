@@ -6,7 +6,7 @@ networks:
 
 services:
   nginx:
-    image: nginx
+    image: nginx:1.15-alpine
     restart: unless-stopped
     volumes:
       - ./data/conf.d:/etc/nginx/conf.d
@@ -21,7 +21,7 @@ services:
     networks:
       - monitor-net
   certbot:
-    image: tobi312/rpi-certbot
+    image: certbot/dns-cloudflare:arm32v6-latest
     restart: unless-stopped
     volumes:
       - ./data/certbot/conf:/etc/letsencrypt
