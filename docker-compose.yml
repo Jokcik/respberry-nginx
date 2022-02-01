@@ -13,7 +13,6 @@ services:
       - ./data/nginx.conf:/etc/nginx/nginx.conf
       - ./data/.htpasswd:/etc/nginx/.htpasswd
       - ./data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certbot
     ports:
       - "80:80"
       - "443:443"

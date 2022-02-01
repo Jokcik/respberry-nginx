@@ -3,11 +3,13 @@
 ### Создать новый сертификат
 
 ```bash
-certbot -d grafana.clever-home.space --manual --preferred-challenges dns certonly
+certbot -d vault.clever-home.space --manual --preferred-challenges dns certonly
 ```
 
 ```
-cp -r /etc/letsencrypt/live/grafana.clever-home.space /home/pi/my-dockers/respberry-nginx/data/certbot/conf/live/grafana.clever-home.space
+mkdir -p /home/pi/my-dockers/respberry-nginx/data/certbot/conf/live/vault.clever-home.space
+cp /etc/letsencrypt/live/vault.clever-home.space/fullchain.pem /home/pi/my-dockers/respberry-nginx/data/certbot/conf/live/vault.clever-home.space/fullchain.pem
+cp /etc/letsencrypt/live/vault.clever-home.space/privkey.pem /home/pi/my-dockers/respberry-nginx/data/certbot/conf/live/vault.clever-home.space/privkey.pem
 ```
 
 
