@@ -1,0 +1,1 @@
+ansible-playbook -i ansible/hosts ansible/play.yml -v

@@ -1,0 +1,5 @@
+---
+- name: reload nginx
+  command: docker-compose restart nginx
+  args:
+    chdir: "{{dir}}"

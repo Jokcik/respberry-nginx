@@ -1,0 +1,12 @@
+---
+- name: Update git
+  command: git pull
+  register: git
+  args:
+    chdir: "{{dir}}"
+  changed_when: git.stdout != "Already up to date."
+  notify: reload nginx
+
+- name: test
+  changed_when: False
+  command: pwd
